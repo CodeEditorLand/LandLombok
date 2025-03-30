@@ -1,13 +1,36 @@
 {
 	"name": "@codeeditorland/lombok",
 	"displayName": "Lombok Annotations Support for VS Code",
+	"version": "0.0.1",
+	"private": false,
 	"description": "Refactor code with Lombok annotations, or remove Lombok annotations with actual methods.",
+	"keywords": [
+		"codeeditorland",
+		"land",
+		"playform"
+	],
+	"homepage": "HTTPS://GitHub.Com/CodeEditorLand/LandLombok#readme",
+	"bugs": {
+		"url": "HTTPS://GitHub.Com/CodeEditorLand/LandLombok/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+HTTPS://github.com/CodeEditorLand/LandLombok.git"
+	},
+	"license": "SEE LICENSE IN LICENSE",
+	"author": {
+		"name": "Source 🖋️ Open 👐🏻",
+		"email": "Source/Open@Editor.Land",
+		"url": "HTTPS://Editor.Land"
+	},
+	"type": "module",
 	"main": "./dist/extension",
 	"scripts": {
 		"build": "webpack --config webpack.config.js --mode=\"production\"",
 		"build-server": "node scripts/build/buildJdtlsExt.js",
 		"clean": "node ./node_modules/rimraf/bin.js out/",
-		"compile": "tsc -p . && webpack --config webpack.config.js"
+		"compile": "tsc -p . && webpack --config webpack.config.js",
+		"prepublishOnly": "Build 'Source/**/*.ts'"
 	},
 	"contributes": {
 		"javaExtensions": [
@@ -34,6 +57,7 @@
 	],
 	"dependencies": {},
 	"devDependencies": {
+		"@playform/build": "0.2.1",
 		"@types/glob": "8.1.0",
 		"@types/node": "22.13.14",
 		"glob": "11.0.1",
@@ -43,6 +67,9 @@
 	"extensionDependencies": [
 		"redhat.java"
 	],
+	"publishConfig": {
+		"access": "public"
+	},
 	"icon": "images/icon.png",
 	"aiKey": []
 }
