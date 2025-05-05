@@ -1,21 +1,20 @@
 {
 	"compilerOptions": {
-		"alwaysStrict": true,
-		"baseUrl": "./",
+		"module": "commonjs",
+		"target": "es6",
+		"outDir": "out",
 		"lib": [
 			"es6"
 		],
-		"module": "commonjs",
+		"sourceMap": true,
+		"rootDir": ".",
+		"noUnusedLocals": true,
+		"noImplicitThis": true,
 		"noImplicitAny": true,
 		"noImplicitReturns": true,
-		"noImplicitThis": true,
-		"noUnusedLocals": true,
 		"noUnusedParameters": true,
-		"outDir": "Target",
-		"rootDir": "src",
-		"sourceMap": true,
 		"strictNullChecks": true,
-		"target": "es6"
+		"alwaysStrict": true
 	},
 	"exclude": [
 		"node_modules",
@@ -24,12 +23,5 @@
 		"javaext",
 		"out",
 		"dist"
-	],
-	"extends": "@playform/build/tsconfig",
-	"include": [
-		"src",
-		"src",
-		"src",
-		"src"
 	]
 }
